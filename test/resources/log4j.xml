@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+    <appender name="myapplication" class="com.log4j.socketappender.AsynchLogAppender">
+        <param name="BufferSize" value="512"/>        
+    </appender>
+    <logger name="com.apache.log4j">
+        <!-- Print only messages of level warn or above  -->
+        <level value="warn"/> 
+    </logger>
+    <root>
+        <priority value="debug"></priority>
+        <appender-ref ref="myapplication"/>
+    </root>
+</log4j:configuration>
